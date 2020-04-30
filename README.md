@@ -31,6 +31,27 @@ En este proyecto nos alejamos un poco del navegador para construir un programa
 que se ejecute usando Node.js, donde aprenderemos sobre cómo interactuar con el
 sistema archivos, con el entorno (_proceso_, _env_, _stdin/stdout/stderr_), ...
 
+## Diagrama de Flujo
+![](img/df1.png)
+
+## Boilerplate
+.
+├── README.md
+├── package.json
+├── package-lock.json
+├── .babelrc
+├── .editorconfig
+├── .eslintrc.json
+├── .gitignore
+├── node_modules
+├── img
+├── src 
+|   └── index.js
+└── test
+   └── test.spec.js
+
+
+
 ## Objetivos
 
 El objetivo práctico de este proyecto es que aprendas cómo crear tu propia
@@ -353,3 +374,4 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 - [Comprendiendo Promesas en Js](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1)
 - [Pill de recursión - video](https://www.youtube.com/watch?v=lPPgY3HLlhQ&t=916s)
 - [Pill de recursión - repositorio](https://github.com/merunga/pildora-recursion)
+
