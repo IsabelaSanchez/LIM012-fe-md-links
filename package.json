@@ -4,7 +4,8 @@
   "description": "my first package.json for Laboratoria's md-links proyect",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "build": "node index.js",
+    "start": "node",
     "test": "jest"
   },
   "repository": {
@@ -18,18 +19,12 @@
   },
   "homepage": "https://github.com/IsabelaSanchez/LIM012-fe-md-links#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-jest": "^25.4.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "jest": "^25.4.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.7",
     "eslint-plugin-jest": "^23.8.2"
   }
 }
