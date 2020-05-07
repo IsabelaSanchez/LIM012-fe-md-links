@@ -1,8 +1,10 @@
 const path = require('path');
-let filename = path.basename('../pruebas/PRUEBA1.md');
-const beAbsolutePath = path.isAbsolute(filename);
 
-console.log('bla bla')
+const beAbsolutePath = (route) => path.isAbsolute(route);
 
-module.exports= {beAbsolutePath};
-
+const transIntoAbsolute = (route) => path.resolve(route);
+console.log(transIntoAbsolute('../pruebas/PRUEBA1.md'));
+console.log(beAbsolutePath('..\PRUEBA2.md'));
+console.log(transIntoAbsolute('..\PRUEBA2.md'));
+console.log(beAbsolutePath(transIntoAbsolute('..\PRUEBA2.md')));
+module.exports = { beAbsolutePath, transIntoAbsolute };
