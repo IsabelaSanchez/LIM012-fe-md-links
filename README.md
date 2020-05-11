@@ -31,15 +31,18 @@ En este proyecto nos alejamos un poco del navegador para construir un programa
 que se ejecute usando Node.js, donde aprenderemos sobre cómo interactuar con el
 sistema archivos, con el entorno (_proceso_, _env_, _stdin/stdout/stderr_), ...
 
-## Diagrama de Flujo
-![](img/df1.png)
+## Diagrama de Flujo API
+![](img/APIFG.jpg)
+
+## Diagrama de Flujo CLI
+![](img/CLIFG.jpg)
+![](img/CLIFG2.jpg)
 
 ## Boilerplate
 .
 ├── README.md
 ├── package.json
 ├── package-lock.json
-├── .babelrc
 ├── .editorconfig
 ├── .eslintrc.json
 ├── .gitignore
@@ -49,7 +52,6 @@ sistema archivos, con el entorno (_proceso_, _env_, _stdin/stdout/stderr_), ...
 |   └── index.js
 └── test
    └── test.spec.js
-
 
 
 ## Objetivos

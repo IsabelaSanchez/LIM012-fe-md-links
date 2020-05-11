@@ -1,6 +1,6 @@
+const path = require('path');
 const { beAbsolutePath, transIntoAbsolute } = require('../src/index.js');
 
-const path = require('path');
 const cwd = process.cwd();
 
 describe('Testing para saber si beAbsolutePath es función', () => {
@@ -11,8 +11,9 @@ describe('Testing para saber si beAbsolutePath es función', () => {
 
 describe('Testing para saber si la ruta es absoluta', () => {
   it('debería dar true si es ruta absoluta', () => {
-    console.log(beAbsolutePath(path.join(cwd,'\\src')));
-    expect(beAbsolutePath(path.join(cwd,'\\src'))).toBe(true);
+    // eslint-disable-next-line no-console
+    console.log(beAbsolutePath(path.join(cwd, '\\src')));
+    expect(beAbsolutePath(path.join(cwd, '\\src'))).toBe(true);
   });
 
   it('debería dar false si es ruta relativa', () => {
@@ -20,13 +21,12 @@ describe('Testing para saber si la ruta es absoluta', () => {
   });
 });
 
-describe('Testing para convertir ruta relativa a ruta absoluta', () =>{
+describe('Testing para convertir ruta relativa a ruta absoluta', () => {
   it('transIntoAbsolute debería ser una función', () => {
     expect(typeof transIntoAbsolute).toBe('function');
   });
   it('debería convertir a ruta absoluta', () => {
-    //console.log(transIntoAbsolute('..\PRUEBA2.md'));
-    expect(transIntoAbsolute('..\PRUEBA2.md')).toBe('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-fe-md-links\\..PRUEBA2.md');
+    // console.log(transIntoAbsolute('..\PRUEBA2.md'));
+    expect(transIntoAbsolute('..\\PRUEBA2.md')).toBe('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-fe-md-links\\..PRUEBA2.md');
   });
 });
-
