@@ -1,5 +1,7 @@
 const path = require('path');
-const { beAbsolutePath, transIntoAbsolute, isDirectory } = require('../src/index.js');
+const {
+  beAbsolutePath, transIntoAbsolute, isDirectory, typeOfExtension,
+} = require('../src/index.js');
 
 const cwd = process.cwd();
 
@@ -40,5 +42,14 @@ describe('Testing para saber si la ruta es directorio o archivo', () => {
   });
   it('isDirectory debería dar false si es archivo', () => {
     expect(isDirectory('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md')).toBe(false);
+  });
+});
+
+describe('Testing para saber cual es la extensión del archivo es', () => {
+  it('typeOfExtension debería ser un función', () => {
+    expect(typeof typeOfExtension).toBe('function');
+  });
+  it('typeOfExtension debe identificar la extensión de esta ruta: .md', () => {
+    expect(typeOfExtension('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md')).toBe('.md');
   });
 });
