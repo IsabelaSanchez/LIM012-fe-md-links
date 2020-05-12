@@ -1,6 +1,6 @@
 const path = require('path');
 const {
-  beAbsolutePath, transIntoAbsolute, isDirectory, typeOfExtension,
+  beAbsolutePath, transIntoAbsolute, isDirectory, typeOfExtension, isFile,
 } = require('../src/index.js');
 
 const cwd = process.cwd();
@@ -33,7 +33,7 @@ describe('Testing para convertir ruta relativa a ruta absoluta', () => {
   });
 });
 
-describe('Testing para saber si la ruta es directorio o archivo', () => {
+describe('Testing para saber si la ruta es directorio', () => {
   it('isDirectory debería ser una función', () => {
     expect(typeof isDirectory).toBe('function');
   });
@@ -42,6 +42,18 @@ describe('Testing para saber si la ruta es directorio o archivo', () => {
   });
   it('isDirectory debería dar false si es archivo', () => {
     expect(isDirectory('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md')).toBe(false);
+  });
+});
+
+describe('Testing para saber si es archivo', () => {
+  it('isFile debería ser una función', () => {
+    expect(typeof isFile).toBe('function');
+  });
+  it('isFile debería dar true si es un archivo', () => {
+    expect(isFile('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md')).toBe(true);
+  });
+  it('isFile debería dar false si no es un archivo', () => {
+    expect(isFile('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas')).toBe('false');
   });
 });
 
