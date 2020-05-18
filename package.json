@@ -25,6 +25,8 @@
     "jest": "^25.4.0"
   },
   "dependencies": {
-    "eslint-plugin-jest": "^23.8.2"
+    "eslint-plugin-jest": "^23.8.2",
+    "markdown-link-extractor": "^1.2.3",
+    "node-fetch": "^2.6.0"
   }
 }

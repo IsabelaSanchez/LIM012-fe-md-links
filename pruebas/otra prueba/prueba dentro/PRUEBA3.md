@@ -1,0 +1,5 @@
+# Hamefura
+
+## Sinopsis
+
+[Hemefura](https://es.wikipedia.org/wiki/Otome_Game_no_Hametsu_Flag_Shika_Naiiii_Akuyaku_Reij%C5%8D_ni_Tensei_Shiteshimatta...)La única hija de duque Claes, Catarina, era orgullosa y egoísta porque fue malcriada por sus padres. Sin embargo, a la edad de ocho años, su padre la llevó al castillo real donde ella golpea su cabeza contra una piedra. Después de esto, recupera los recuerdos de su vida anterior como una niña otaku que perdió la vida en un accidente de tráfico. Este mundo le parece familiar, por lo que se da cuenta de que es el del juego otome, Fortune Lover, que jugó antes de su accidente y que en realidad reencarnó como la rival de la heroína y antagonista del juego, también recuerda que todo lo que le esperaba a Catarina al final del juego era el camino a la destrucción que termina en su exilio lejos del reino o su ejecución. Por lo tanto, Catarina dedicará todos sus esfuerzos a evitar un final destructivo para pasar una vejez pacífica. [Opening del anime](https://www.youtube.com/watch?v=00zguIZOXlA)
