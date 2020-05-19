@@ -22,7 +22,7 @@ const readingFiles = (route) => fs.readFileSync(route, 'utf-8');
 // función sincróna para leer los files
 // console.log(readingFiles('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md'));
 
-const isAValidPath = (route) => fs.existsSync(route)
+// const isAValidPath = (route) => fs.existsSync(route)
 // console.log(isAValidPath('../pruebas/pruebaDeDIrectorio'));
 
 const getArrayOfFilesAndDirectories = (route) => {
@@ -55,9 +55,6 @@ const getMDFiles = (route) => {
 //como ya guaradmos el archivo md en un array, ahora hay que leerlo
 
 const getMDLinks = (route) => {
-  if (!isAValidPath(route)) {
-    throw Error;
-  } else {
     if (!beAbsolutePath(route)) {
       const newTransAbsolutePath = transIntoAbsolute(route);
       let finalArrayOfMDLinks = [];
@@ -75,10 +72,10 @@ const getMDLinks = (route) => {
       });
       return finalArrayOfMDLinks; 
     }
-  }  
 };
 // console.log(getMDLinks('../pruebas'));
   //  console.log('Aquí va la prueba del markeddd: ')
+ //console.log(getMDLinks('../pruebas'));
 
 
 const validateOption = (route) => {
@@ -90,16 +87,15 @@ const validateOption = (route) => {
     usersRoute.forEach((element) => {
       newLinksInfo.push(fetch(element.href)
       .then((res) => {
-        const newElement = {
+        const newElementInfo = {
           href: element.href,
           text: element.text,
           file: element.file,          
           status: res.status,
           statusText: res.statusText
         };
-        return newElement;
-      })
-      .catch(error => console.error(error)));
+        return newElementInfo;
+      }));
     });
   }
   return Promise.all(newLinksInfo).then(val => console.log(val));
