@@ -28,11 +28,11 @@ const readingDirectories = (route) => fs.readdirSync(route);
 const getArrayOfFilesAndDirectories = (route) => {
   const readDirectory = readingDirectories(route);// Lee el directorio
   return readDirectory.map((file) => // con ayuda de map el directorio entra en un array
-    path.join(route, file), // se crea file, path con el metodo join llama aruta y a file.
-  ) // Al final retorna la ruta de todo los archivos y directorios. PERO NO ENTRA EN CADA DIRECTORIO
+    path.join(route, file),); // se crea file, path con el metodo join llama aruta y a file.
+   // Al final retorna la ruta de todo los archivos y directorios. PERO NO ENTRA EN CADA DIRECTORIO
 };
 // console.log('Prueba de getArrayofFiles... : ');
-// console.log(getArrayOfFilesAndDirectories('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS'));
+//console.log(getArrayOfFilesAndDirectories('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS'));
 
 const getMDFiles = (route) => {
   let arrayOfMDFiles = []; // vamos a ir agregando componentes al array con ayuda de push
@@ -73,8 +73,8 @@ const getMDLinks = (route) => {
       return finalArrayOfMDLinks; 
     }
 };
-console.log('Aquí va la prueba del marked(función getMDLinks) :')
-console.log(getMDLinks('../pruebas'));
+// console.log('Aquí va la prueba del marked(función getMDLinks) :')
+// console.log(getMDLinks('../pruebas'));
 
 
 const validateOption = (route) => {
