@@ -21,12 +21,12 @@ const typeOfExtension = (route) => path.extname(route);
 const readingFiles = (route) => fs.readFileSync(route, 'utf-8');
 // función sincróna para leer los files
 // console.log(readingFiles('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md'));
-
-// const isAValidPath = (route) => fs.existsSync(route)
+const readingDirectories = (route) => fs.readdirSync(route);
+ const isAValidPath = (route) => fs.existsSync(route)
 // console.log(isAValidPath('../pruebas/pruebaDeDIrectorio'));
 
 const getArrayOfFilesAndDirectories = (route) => {
-  const readDirectory = fs.readdirSync(route);// Lee el directorio
+  const readDirectory = readingDirectories(route);// Lee el directorio
   return readDirectory.map((file) => // con ayuda de map el directorio entra en un array
     path.join(route, file), // se crea file, path con el metodo join llama aruta y a file.
   ) // Al final retorna la ruta de todo los archivos y directorios. PERO NO ENTRA EN CADA DIRECTORIO
@@ -73,9 +73,8 @@ const getMDLinks = (route) => {
       return finalArrayOfMDLinks; 
     }
 };
-// console.log(getMDLinks('../pruebas'));
-  //  console.log('Aquí va la prueba del markeddd: ')
- //console.log(getMDLinks('../pruebas'));
+console.log('Aquí va la prueba del marked(función getMDLinks) :')
+console.log(getMDLinks('../pruebas'));
 
 
 const validateOption = (route) => {
@@ -101,11 +100,22 @@ const validateOption = (route) => {
   return Promise.all(newLinksInfo).then(val => console.log(val));
 };
 
-// Si hay links + status
-// console.log(validateOption('../pruebas'));
+// Si hay links + status <-Aquí devuelve un array
+// console.log(validateOption('../pruebas')); 
 // No hay links opción
 // console.log(validateOption('../pruebas/pruebaDeDIrectorio'));
 
 module.exports = {
-  beAbsolutePath, transIntoAbsolute, isDirectory, typeOfExtension, isFile,
+  beAbsolutePath, 
+  transIntoAbsolute, 
+  isDirectory, 
+  typeOfExtension, 
+  isFile, 
+  readingFiles,
+  readingDirectories, 
+  isAValidPath,
+  getArrayOfFilesAndDirectories,
+  getMDFiles,
+  getMDLinks, 
+  validateOption
 };
