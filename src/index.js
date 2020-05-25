@@ -22,8 +22,6 @@ const readingFiles = (route) => fs.readFileSync(route, 'utf-8');
 // función sincróna para leer los files
 // console.log(readingFiles('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md'));
 const readingDirectories = (route) => fs.readdirSync(route);
- const isAValidPath = (route) => fs.existsSync(route)
-// console.log(isAValidPath('../pruebas/pruebaDeDIrectorio'));
 
 const getArrayOfFilesAndDirectories = (route) => {
   const readDirectory = readingDirectories(route);// Lee el directorio
@@ -71,7 +69,7 @@ const getMDLinks = (route) => {
         marked(readingFiles(file), { renderer });
       });
       return finalArrayOfMDLinks; 
-    }
+    };
 };
 // console.log('Aquí va la prueba del marked(función getMDLinks) :')
 // console.log(getMDLinks('../pruebas'));
@@ -81,7 +79,7 @@ const validateOption = (route) => {
   let newLinksInfo = [];
   const usersRoute = getMDLinks(route);
   if (usersRoute.length === 0) {
-    return 'No hay links'
+    return 'There are 0 links'
   } else {
     usersRoute.forEach((element) => {
       newLinksInfo.push(fetch(element.href)
@@ -113,7 +111,6 @@ module.exports = {
   isFile, 
   readingFiles,
   readingDirectories, 
-  isAValidPath,
   getArrayOfFilesAndDirectories,
   getMDFiles,
   getMDLinks, 
