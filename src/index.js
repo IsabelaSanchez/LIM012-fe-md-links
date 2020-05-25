@@ -86,7 +86,7 @@ const validateOption = (route) => {
       .then((res) => {
         const newElementInfo = {
           href: element.href,
-          text: element.text,
+          text: element.text.substring(0, 50),
           file: element.file,          
           status: res.status,
           statusText: res.statusText
@@ -95,7 +95,7 @@ const validateOption = (route) => {
       }));
     });
   }
-  return Promise.all(newLinksInfo).then(val => console.log(val));
+  return Promise.all(newLinksInfo);
 };
 
 // Si hay links + status <-Aquí devuelve un array

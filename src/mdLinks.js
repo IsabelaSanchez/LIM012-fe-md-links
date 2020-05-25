@@ -12,7 +12,7 @@ const mdLinks = (route, options) => {
   return links;
 };
 // console.log('Prueba de MDLinks, validate false');
-// console.log(mdLinks('../pruebas')); //
+// console.log(mdLinks('../pruebas', { validate: false })); //
 // console.log(mdLinks('../pruebas', { validate: true }));
 // console.log(''); //
-module.export = { mdLinks };
+module.exports = { mdLinks };
