@@ -22,15 +22,16 @@ const readingFiles = (route) => fs.readFileSync(route, 'utf-8');
 // función sincróna para leer los files
 // console.log(readingFiles('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md'));
 const readingDirectories = (route) => fs.readdirSync(route);
+ // console.log(readingDirectories('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS')); 
+ //devuelve array de elementos
 
 const getArrayOfFilesAndDirectories = (route) => {
-  const readDirectory = readingDirectories(route);// Lee el directorio
-  return readDirectory.map((file) => // con ayuda de map el directorio entra en un array
-    path.join(route, file),); // se crea file, path con el metodo join llama aruta y a file.
-   // Al final retorna la ruta de todo los archivos y directorios. PERO NO ENTRA EN CADA DIRECTORIO
+  return readingDirectories(route).map(element =>
+    path.join(route, element),);
 };
 // console.log('Prueba de getArrayofFiles... : ');
-//console.log(getArrayOfFilesAndDirectories('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS'));
+// console.log(getArrayOfFilesAndDirectories('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS'));
+// devuelve nuevo array de elementos + la ruta de cada archivo/directorio
 
 const getMDFiles = (route) => {
   let arrayOfMDFiles = []; // vamos a ir agregando componentes al array con ayuda de push
@@ -39,11 +40,11 @@ const getMDFiles = (route) => {
       arrayOfMDFiles.push(route);
     }
   } else { // si no ...
-    getArrayOfFilesAndDirectories(route).forEach((file) => { //llamar a getArrayOfFilesAndDirectories, para que entre dentro del nuevo directorio.
-      const filesOfNewRoute = file;// como la función for each siempre llama a un element donde guarda la lista, nosotros lo llamamos file, guardamos los files del nuevo directorio en const files of new route
+    getArrayOfFilesAndDirectories(route).forEach((element) => { //llamar a getArrayOfFilesAndDirectories, para que entre dentro del nuevo directorio.
+      const filesOfNewRoute = element;// como la función for each siempre llama a un element donde guarda la lista, nosotros lo llamamos file, guardamos los files del nuevo directorio en const files of new route
       const getMDFilesInNewRoute = getMDFiles(filesOfNewRoute);//le pasamos la funcion getMdFiles a los files de la nueva ruta, para que haga la busqueda de archivos MD of vuelva a entrar a un nuevo diretcorio.
       arrayOfMDFiles = arrayOfMDFiles.concat(getMDFilesInNewRoute);//concatenamos los files md de la nueva ruta con el array de files total
-    });
+    });//al pasar de getMDFiles dentro de getMDFiles hacemos uso de la recursionnnnn!!!
   }
   return arrayOfMDFiles;
 };
@@ -77,11 +78,11 @@ const getMDLinks = (route) => {
 
 const validateOption = (route) => {
   let newLinksInfo = [];
-  const usersRoute = getMDLinks(route);
-  if (usersRoute.length === 0) {
+  const usersLinkArray = getMDLinks(route);
+  if (usersLinkArray.length === 0) {
     return 'There are 0 links'
   } else {
-    usersRoute.forEach((element) => {
+    usersLinkArray.forEach((element) => {
       newLinksInfo.push(fetch(element.href)
       .then((res) => {
         const newElementInfo = {
