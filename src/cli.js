@@ -22,9 +22,9 @@ const statsValidate = (arrayOfMDLinks) => {
   const brokenLinks = new Set(arrayOfMDLinks.filter((href) => (href.status >= 400))).size;
   const statsValidateTemplate = `
     Final Stats Validate
-    👌TOTAL: ${totalLinks}
-    👍UNIQUE: ${uniqueLinks}
-    👎BROKEN: ${brokenLinks}
+    TOTAL: ${totalLinks}
+    UNIQUE: ${uniqueLinks}
+    BROKEN: ${brokenLinks}
       `;
   return statsValidateTemplate;
 };
