@@ -1,27 +1,32 @@
-# Markdown Links
+# Markdown Links 📄🔗
 
 ![md-links](img/Present.png)
 
-## Preámbulo
+## About the project
 
 Welcome to my first library! This the Markdown Links Library which will help you to extract
 the links of all the markdown links of a path. It also give the information:
 - Validate Links(OK, FAIL)
 - Stats Links(total, unique, broken)
+SPOILER ALERT!!
+![spoiler](img/spoiler.png)
 
-## Diagrama de Flujo API
+## Flow Chart 
 
-- To create this library first we need to understand how we can built everything from the start, that's why we use:
-1._Flujograma.
-2._Git hub projects.
+- To create this library first we need to understand how we can built everything from the start, that's why we used:
+   - Flow Chart.
+   - Git hub projects.
+
+### API Flow Chart
 
 ![](img/APIFG.jpg)
 
-## Diagrama de Flujo CLI
+### CLI Flow Chart
+
 ![](img/CLIFG.jpg)
 ![](img/CLIFG2.jpg)
 
-## Criterios de aceptacion
+## How to install mdLinks?
 
 - Install this library with this command: `npm install IsabelaSanchez/LIM012-fe-md-links `
 
@@ -52,7 +57,8 @@ mdLinks("./some/dir")
 ```
 
 ### CLI (Command Line Interface - Interfaz de Línea de Comando)
-`Remember that to use this library you need to insert:
+
+``Remember that to use this library you need to insert:
 👉 md-links <path-to-file>
 👉 md-links <path-to-file> [valid arguments]
 *****************Valid Arguments*****************
@@ -61,16 +67,21 @@ mdLinks("./some/dir")
 ⭐md-links <path-to-file> --V   --S
 ⭐md-links <path-to-file> --validate
 ⭐md-links <path-to-file> --stats
-*************************************************`
+*************************************************```
 
-## Objetivos de aprendizaje
+---
 
-Recuerda colocar en esta seccion los objetivos de aprendizaje que quedaron 
-pendientes de tu proyecto anterior.
+### Data Lovers learning goals
+- [⭐] Entender la diferencia entre expression y statements.
+- [⭐] Entender el uso de bucles (for | forEach).
+- [⭐] Manipular arrays (filter | map | sort | reduce).
+- [😅] Entender como funciona flexbox en CSS. *Este objetivo se queda para Red Social
+- [⭐] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [⭐] Utilizar linter para seguir buenas prácticas (ESLINT)
 
 ### Javascript
 - [⭐] Uso de callbacks
-- [ ] Consumo de Promesas
+- [😅] Consumo de Promesas
 - [⭐] Creacion de Promesas
 - [⭐] Modulos de Js
 - [⭐] Recursión
@@ -85,7 +96,7 @@ pendientes de tu proyecto anterior.
 
 ### Testing
 - [⭐] Testeo de tus funciones
-- [ ] Testeo asíncrono
+- [😅] Testeo asíncrono
 - [ ] Uso de librerias de Mock
 - [ ] Mocks manuales
 - [ ] Testeo para multiples Sistemas Operativos
@@ -99,6 +110,15 @@ pendientes de tu proyecto anterior.
 - [ ] Linting
 
 ***
+
+## The End 	:shipit:
+So this was mdLinks! I suffer a lot during this project but learn JS for real!
+![gif](https://steamuserimages-a.akamaihd.net/ugc/954101135156565426/21D9841F8E03ED30D91A7720388E1E8D3A464FC0/)
+Thank you to everyone who help and give the opportunity to learn and ask during this process. I know I would be a great Front End Developer!!
+
+See you on Red Social!!
+
+![gif2](https://tenor.com/3Kua.gif)
 
 ## Pistas / Tips
 
