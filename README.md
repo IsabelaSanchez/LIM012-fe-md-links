@@ -58,7 +58,8 @@ mdLinks("./some/dir")
 
 ### CLI (Command Line Interface - Interfaz de Línea de Comando)
 
-``
+```js
+
 Remember that to use this library you need to insert:
 👉 md-links <path-to-file>
 👉 md-links <path-to-file> [valid arguments]
@@ -68,7 +69,9 @@ Remember that to use this library you need to insert:
 ⭐md-links <path-to-file> --V   --S
 ⭐md-links <path-to-file> --validate
 ⭐md-links <path-to-file> --stats
-************************************************* ``
+************************************************* 
+
+```
 
 ---
 
