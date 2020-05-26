@@ -4,6 +4,7 @@
   "description": "my first package.json for Laboratoria's md-links proyect",
   "main": "index.js",
   "scripts": {
+    "help": "node cli.js",
     "build": "node index.js",
     "start": "node",
     "test": "jest"
