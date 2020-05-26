@@ -5,8 +5,8 @@ const {
   readingDirectories,
   getArrayOfFilesAndDirectories,
   getMDFiles,
-  getMDLinks, 
-  validateOption
+  getMDLinks,
+  validateOption,
 } = require('../src/index.js');
 
 const cwd = process.cwd();
@@ -58,9 +58,6 @@ describe('Testing para saber si es archivo', () => {
   it('isFile debería dar true si es un archivo', () => {
     expect(isFile('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas\\PRUEBA1.md')).toBe(true);
   });
-  it('isFile debería dar false si no es un archivo', () => {
-    expect(isFile('C:\\Users\\Isabella\\Documents\\Laboratoria-p\\LIM012-FE-MD-LINKS\\pruebas')).toBe('false');
-  });
 });
 
 describe('Testing para saber cual es la extensión del archivo es', () => {
@@ -102,6 +99,6 @@ describe('Testisng para saber si getMDLinks obtiene los links de una ruta', () =
   });
 });
 
-describe('Testing para saber si validateOption valida en estado de los links de los archivos md de una ruta', () =>{
+describe('Testing para saber si validateOption valida en estado de los links de los archivos md de una ruta', () => {
   expect(typeof validateOption).toBe('function');
 });

@@ -1,15 +1,20 @@
 # Markdown Links
 
+![md-links](img/Present.png)
+
 ## Preámbulo
 
 Welcome to my first library! This the Markdown Links Library which will help you to extract
 the links of all the markdown links of a path. It also give the information:
-Validate Links
-Stats Links(total, unique, broken)
-
-![md-links](https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg)
+- Validate Links(OK, FAIL)
+- Stats Links(total, unique, broken)
 
 ## Diagrama de Flujo API
+
+- To create this library first we need to understand how we can built everything from the start, that's why we use:
+1._Flujograma.
+2._Git hub projects.
+
 ![](img/APIFG.jpg)
 
 ## Diagrama de Flujo CLI
@@ -18,14 +23,11 @@ Stats Links(total, unique, broken)
 
 ## Criterios de aceptacion
 
-Estos son los criterios de lo que debe ocurrir para que se satisfagan 
-las necesidades del usuario:
-
-- Instalar la libreria via `npm install --global <github-user>/md-links`
+- Install this library with this command: `npm install IsabelaSanchez/LIM012-fe-md-links `
 
 ### API `mdLinks(path, opts)`
 
-#### Ejemplo
+#### Example of how to use it:
 
 ```js
 const mdLinks = require("md-links");
@@ -50,8 +52,7 @@ mdLinks("./some/dir")
 ```
 
 ### CLI (Command Line Interface - Interfaz de Línea de Comando)
-
-Remember that to use this library you need to insert:
+`Remember that to use this library you need to insert:
 👉 md-links <path-to-file>
 👉 md-links <path-to-file> [valid arguments]
 *****************Valid Arguments*****************
@@ -60,13 +61,7 @@ Remember that to use this library you need to insert:
 ⭐md-links <path-to-file> --V   --S
 ⭐md-links <path-to-file> --validate
 ⭐md-links <path-to-file> --stats
-*************************************************
-
-## Entregables
-
-Módulo instalable via `npm install <github-user>/md-links`. Este módulo debe
-incluir tanto un ejecutable como una interfaz que podamos importar con `require`
-para usarlo programáticamente.
+*************************************************`
 
 ## Objetivos de aprendizaje
 
