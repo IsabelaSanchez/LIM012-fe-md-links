@@ -119,7 +119,7 @@ So this was mdLinks! I suffer a lot during this project but learn JS for real!
 
 - **See you on Red Social!!
 
-![gif2](https://tenor.com/view/new-game-ahagon-umiko-programming-work-working-at-work-gif-13247664)
+![gif2](img/gif.gif)
 
 ## Pistas / Tips
 
